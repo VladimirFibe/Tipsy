@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F01E2F027BD6D9000A75E8D /* TipsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01E2EF27BD6D9000A75E8D /* TipsyApp.swift */; };
 		1F01E2F227BD6D9000A75E8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01E2F127BD6D9000A75E8D /* ContentView.swift */; };
 		1F01E2F427BD6D9100A75E8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F01E2F327BD6D9100A75E8D /* Assets.xcassets */; };
 		1F01E2F727BD6D9100A75E8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F01E2F627BD6D9100A75E8D /* Preview Assets.xcassets */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		1F01E2EC27BD6D9000A75E8D /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F01E2EF27BD6D9000A75E8D /* TipsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsyApp.swift; sourceTree = "<group>"; };
 		1F01E2F127BD6D9000A75E8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F01E2F327BD6D9100A75E8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F01E2F627BD6D9100A75E8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				1F01E2FF27BDD13300A75E8D /* Info.plist */,
-				1F01E2EF27BD6D9000A75E8D /* TipsyApp.swift */,
 				1F01E2FD27BDD0E800A75E8D /* AppDelegate.swift */,
 				1F01E30027BDD18800A75E8D /* SceneDelegate.swift */,
 				1F01E30227BDD1A900A75E8D /* TipsyViewController.swift */,
@@ -157,7 +154,6 @@
 				1F01E2FE27BDD0E800A75E8D /* AppDelegate.swift in Sources */,
 				1F01E30727BDFE2600A75E8D /* TipsyBrain.swift in Sources */,
 				1F01E2F227BD6D9000A75E8D /* ContentView.swift in Sources */,
-				1F01E2F027BD6D9000A75E8D /* TipsyApp.swift in Sources */,
 				1F01E30127BDD18800A75E8D /* SceneDelegate.swift in Sources */,
 				1F01E30327BDD1A900A75E8D /* TipsyViewController.swift in Sources */,
 				1F01E30527BDD40D00A75E8D /* ResultViewController.swift in Sources */,

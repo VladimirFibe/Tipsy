@@ -5,7 +5,7 @@
 //  Created by Vladimir Fibe on 17.02.2022.
 //
 
-import UIKit
+import SwiftUI
 
 class TipsyViewController: UIViewController {
   var brain = TipsyBrain()
@@ -14,6 +14,7 @@ class TipsyViewController: UIViewController {
       calculateButton.isEnabled = selectedTip != nil
     }
   }
+  
   let billTextField: UITextField = {
     let textField = UITextField()
     textField.placeholder = "e.g.123.56"
@@ -32,12 +33,13 @@ class TipsyViewController: UIViewController {
     button.layer.cornerRadius = 10
     button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.addTarget(self, action: #selector(calculatePressed), for: .touchUpInside)
+    button.addTarget(nil, action: #selector(calculatePressed), for: .touchUpInside)
     button.isEnabled = false
     return button
   }()
   
   var buttons = [UIButton]()
+  
   let splitNumberLabel: UILabel = {
     let label = UILabel()
     label.text = "2"
@@ -45,34 +47,33 @@ class TipsyViewController: UIViewController {
     label.textColor = #colorLiteral(red: 0, green: 0.6901960784, blue: 0.4196078431, alpha: 1) // 00B06B
     return label
   }()
+  
   let stepper: UIStepper = {
     let stepper = UIStepper()
     stepper.value = 2
     stepper.minimumValue = 2
     stepper.maximumValue = 25
     stepper.stepValue = 1
-    stepper.addTarget(self, action: #selector(stepperValueChanged), for: .valueChanged)
+    stepper.addTarget(nil, action: #selector(stepperValueChanged), for: .valueChanged)
     return stepper
   }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    
     setupUI()
   }
+  
   func updateTips() {
     for i in 0..<buttons.count {
       buttons[i].isSelected = i == selectedTip
     }
   }
+  
   func setupUI() {
     view.backgroundColor = #colorLiteral(red: 0.9725490196, green: 1, blue: 0.9921568627, alpha: 1) // F8FFFD
-    let enterBillTotal = TipsyLabels()
-    enterBillTotal.text = "Enter bill total"
-    let selectTip = TipsyLabels()
-    selectTip.text = "Select tip"
-    let chooseSplit = TipsyLabels()
-    chooseSplit.text = "Choose Split"
+    let enterBillTotal = UILabel("Enter bill total")
+    let selectTip = UILabel("Select tip")
+    let chooseSplit = UILabel("Choose Split")
 
     let topStack = UIStackView(arrangedSubviews: [enterBillTotal, billTextField])
     topStack.axis = .vertical
@@ -112,12 +113,7 @@ class TipsyViewController: UIViewController {
     splitStack.distribution = .equalSpacing
     splitStack.spacing = 27
     
-    let stack = UIStackView(arrangedSubviews: [
-    selectTip,
-    buttonsStack,
-    chooseSplit,
-    splitStack
-    ])
+    let stack = UIStackView(arrangedSubviews: [selectTip, buttonsStack, chooseSplit, splitStack])
     stack.axis = .vertical
     stack.alignment = .fill
     stack.distribution = .equalSpacing
@@ -127,7 +123,6 @@ class TipsyViewController: UIViewController {
     stack.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 20).isActive = true
     stack.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: 20).isActive = true
     stack.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -20).isActive = true
-
   }
   
   func setupButtons() {
@@ -166,17 +161,32 @@ class TipsyViewController: UIViewController {
   }
 }
 
-class TipsyLabels: UILabel {
-
-  override init(frame: CGRect) {
-    super.init(frame: frame)
-    
+extension UILabel {
+  convenience init(_ title: String = "") {
+    self.init()
+    text = title
     font = .systemFont(ofSize: 25)
     textColor = .lightGray
   }
+}
+
+struct SwiftUIController: UIViewControllerRepresentable {
+  typealias UIViewControllerType = TipsyViewController
   
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+  func makeUIViewController(context: Context) -> UIViewControllerType {
+    let viewController = UIViewControllerType()
+    return viewController
+  }
+  
+  func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    
+  }
+}
+
+struct SwiftUIController_Previews: PreviewProvider {
+  static var previews: some View {
+    SwiftUIController()
+      .edgesIgnoringSafeArea(.all)
   }
 }
 

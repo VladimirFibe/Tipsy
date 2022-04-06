@@ -32,14 +32,15 @@ class ResultViewController: UIViewController {
     button.layer.cornerRadius = 10
     button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.addTarget(self, action: #selector(recalculatePressed), for: .touchUpInside)
+    button.addTarget(nil, action: #selector(recalculatePressed), for: .touchUpInside)
     return button
   }()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-
     setupUI()
   }
+  
   func setupUI() {
     totalLabel.text = value
     settingsLabel.text = "Split between \(count) people, with \(tip)% tip."
@@ -61,8 +62,8 @@ class ResultViewController: UIViewController {
     recalculateButton.translatesAutoresizingMaskIntoConstraints = false
     recalculateButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     recalculateButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
-
   }
+  
   @objc func recalculatePressed(_ sender: UIButton) {
     self.dismiss(animated: true)
   }
