@@ -17,3 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 ```
+
+Скачиваем [проект](https://github.com/appbrewery/Tipsy-iOS13-Completed)
+
+Открываем проект и перетягиваем иконку приложения (1024pt)
+
+![](/img/2.png)
+
+Начнем с цвета фона
+
+![](/img/3.png)
+
+Перетягиваем цвет в код
+![](/img/4.png)
