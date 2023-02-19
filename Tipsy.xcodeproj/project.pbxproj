@@ -25,6 +25,7 @@
 		02F3374929A247C60017B46D /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 		02F3374A29A24C070017B46D /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		02F3374B29A24DA40017B46D /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		02F3374C29A276550017B46D /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
 		1F01E2EC27BD6D9000A75E8D /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F01E2F327BD6D9100A75E8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F01E2F627BD6D9100A75E8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 				02F3374929A247C60017B46D /* 6.png */,
 				02F3374A29A24C070017B46D /* 7.png */,
 				02F3374B29A24DA40017B46D /* 8.png */,
+				02F3374C29A276550017B46D /* 9.png */,
 			);
 			path = img;
 			sourceTree = "<group>";
