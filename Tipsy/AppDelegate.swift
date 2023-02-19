@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  Tipsy
-//
-//  Created by Vladimir Fibe on 17.02.2022.
-//
 import UIKit
 
 @main
@@ -19,8 +13,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
   }
-
-  func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) { }
-
-
 }
